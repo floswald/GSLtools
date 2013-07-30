@@ -5,11 +5,11 @@ rcpp_hello_world <- function() {
     .Call('GSLtools_rcpp_hello_world', PACKAGE = 'GSLtools')
 }
 
-#' Matrix Interpolator
+#' Matrix Linear Interpolator
 #'
 #' takes 2 matrices Y and Xi, and a grid x. x and Y are
 #' original function values on x and Xi are new points
-#' at which to evaluate the function
+#' at which to evaluate the function. Linear Interpolation.
 #' @param x grid on which Y=f(x) defined
 #' @param Y matrix of funciton values. each row is a different function defined on same grid.
 #' @param Xi matrix of new grid values at which to obtain Xi = f(Yi).

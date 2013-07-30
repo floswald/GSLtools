@@ -42,7 +42,7 @@ NumericMatrix matinterp( NumericVector x, NumericMatrix Y, NumericMatrix Xi ){
 	
 
 	if (x.length() != m){
-		throw Rcpp::exception( "util_module::ufuns.h::matinterp grid x != ncol(X)");
+		throw Rcpp::exception( "GSLTools::tools.cpp::matinterp grid x != ncol(X)");
 		return R_NilValue;
 	}
 		

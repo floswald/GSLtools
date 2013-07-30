@@ -1,6 +1,6 @@
 \name{matinterp}
 \alias{matinterp}
-\title{Matrix Interpolator}
+\title{Matrix Linear Interpolator}
 \usage{
   matinterp(x, Y, Xi)
 }
@@ -16,7 +16,7 @@
 \description{
   takes 2 matrices Y and Xi, and a grid x. x and Y are
   original function values on x and Xi are new points at
-  which to evaluate the function
+  which to evaluate the function. Linear Interpolation.
 }
 \examples{
 x <- seq(0,1,le=10)
