@@ -10,20 +10,30 @@ using namespace Rcpp;
 List rcpp_hello_world();
 RcppExport SEXP GSLtools_rcpp_hello_world() {
 BEGIN_RCPP
-    Rcpp::RNGScope __rngScope;
-    List __result = rcpp_hello_world();
-    return Rcpp::wrap(__result);
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        List __result = rcpp_hello_world();
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
 END_RCPP
 }
 // matinterp
 NumericMatrix matinterp(NumericVector x, NumericMatrix Y, NumericMatrix Xi);
 RcppExport SEXP GSLtools_matinterp(SEXP xSEXP, SEXP YSEXP, SEXP XiSEXP) {
 BEGIN_RCPP
-    Rcpp::RNGScope __rngScope;
-    NumericVector x = Rcpp::as<NumericVector >(xSEXP);
-    NumericMatrix Y = Rcpp::as<NumericMatrix >(YSEXP);
-    NumericMatrix Xi = Rcpp::as<NumericMatrix >(XiSEXP);
-    NumericMatrix __result = matinterp(x, Y, Xi);
-    return Rcpp::wrap(__result);
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        NumericVector x = Rcpp::as<NumericVector >(xSEXP);
+        NumericMatrix Y = Rcpp::as<NumericMatrix >(YSEXP);
+        NumericMatrix Xi = Rcpp::as<NumericMatrix >(XiSEXP);
+        NumericMatrix __result = matinterp(x, Y, Xi);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
 END_RCPP
 }
